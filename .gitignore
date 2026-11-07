@@ -1,0 +1,19 @@
+# Private working files (never published)
+_study/
+PROGRESS.md
+
+# Local tooling
+.venv/
+__pycache__/
+*.pyc
+
+# OS and Office temp files
+.DS_Store
+~$*
+.~lock.*
+
+# Secrets (defensive)
+.env
+.env.*
+*.pem
+*.key
