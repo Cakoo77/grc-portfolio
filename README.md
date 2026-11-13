@@ -23,7 +23,7 @@ I am a final-year Information Security student in Baku with GRC and red-team int
 |---|---|---|---|
 | <a href="00-company-profile/README.md"><img src="00-company-profile/cover.png" width="170" alt="Company Fact Sheet cover"></a> | **[0. Company Fact Sheet](00-company-profile/README.md)** | Client baseline: organization, 26 systems, 20 vendors, data flows, regulatory landscape and 12 baseline observations | Complete |
 | <a href="01-gap-assessment/README.md"><img src="01-gap-assessment/cover.png" width="170" alt="Gap Assessment cover"></a> | **[1. ISO/IEC 27001:2022 Gap Assessment and Roadmap](01-gap-assessment/README.md)** | 123 requirements scored, attack path analysis, top 10 gaps, quick wins and a 12-month route to certification | Complete |
-| | 2. Threat-Informed Risk Assessment | ISO/IEC 27005 method, asset and risk registers, MITRE ATT&CK mapping, attack-scenario deep dives | Planned |
+| <a href="02-risk-assessment/README.md"><img src="02-risk-assessment/cover.png" width="170" alt="Risk Assessment cover"></a> | **[2. Threat-Informed Risk Assessment](02-risk-assessment/README.md)** | 30 risks scored at three stages, MITRE ATT&CK threat mapping, three kill-chain scenarios, treatment plan and risk acceptance | Complete |
 | | 3. ISMS Documentation Suite | Scope, objectives, RACI, 12 policies and 2 procedures | Planned |
 | | 4. Statement of Applicability | All 93 controls linked to risks, policies and evidence | Planned |
 | | 5. Internal Audit and Management Review | Audit program, findings, root cause analysis, management review pack | Planned |
@@ -64,4 +64,4 @@ A gap found in Project 1 becomes a risk in Project 2, is treated by a control in
 
 ## Frameworks covered so far
 
-ISO/IEC 27001:2022 with Amendment 1:2024, DORA, GDPR, PCI DSS v4.0.1 and NIS2 at scoping level, and MITRE ATT&CK. Standards are referenced by clause number, control ID and short name only; all descriptions are written in my own words.
+ISO/IEC 27001:2022 with Amendment 1:2024, ISO/IEC 27005:2022, DORA, GDPR, PCI DSS v4.0.1 and NIS2 at scoping level, and MITRE ATT&CK. Standards are referenced by clause number, control ID and short name only; all descriptions are written in my own words.
