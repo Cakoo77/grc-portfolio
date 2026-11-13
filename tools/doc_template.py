@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import re
 import subprocess
+import tempfile
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -24,6 +25,7 @@ from PIL import Image, ImageDraw, ImageFont
 ROOT = Path(__file__).resolve().parents[1]
 ASSETS = ROOT / "assets"
 MONOGRAM = ASSETS / "js-monogram.png"
+MONOGRAM_WHITE = ASSETS / "js-monogram-white.png"
 
 DISCLAIMER = "Sample engagement — fictional company, prepared for portfolio purposes."
 FONT = "Arial"
@@ -58,6 +60,11 @@ def make_monogram(path: Path = MONOGRAM, size: int = 512) -> None:
     img = img.resize((size, size), Image.LANCZOS)
     path.parent.mkdir(parents=True, exist_ok=True)
     img.save(path)
+    white = Image.new("RGBA", (big, big), (0, 0, 0, 0))
+    draw = ImageDraw.Draw(white)
+    draw.rounded_rectangle((0, 0, big - 1, big - 1), radius=big // 7, fill="white")
+    draw.text((big / 2, big / 2), "JS", font=font, fill=f"#{ACCENT}", anchor="mm")
+    white.resize((size, size), Image.LANCZOS).save(MONOGRAM_WHITE)
     path.with_suffix(".svg").write_text(
         f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><rect width="512" height="512" '
         f'rx="73" fill="#{ACCENT}"/><text x="256" y="256" dy=".35em" text-anchor="middle" '
@@ -362,27 +369,39 @@ class BrandDoc:
         run.font.size, run.font.color.rgb = Pt(8), rgb(MUTED)
         _para_border(first, "top")
 
-        p = self.doc.paragraphs[0] if self.doc.paragraphs else self.doc.add_paragraph()
-        p.add_run().add_picture(str(MONOGRAM), height=Cm(1.5))
-        p.paragraph_format.space_after = Pt(4)
-        p = self.doc.add_paragraph()
-        run = p.add_run("Jahangir Shukurov")
-        run.font.bold, run.font.size = True, Pt(11)
+        for stray in self.doc.paragraphs:
+            stray.paragraph_format.space_after = Pt(0)
+            stray.paragraph_format.line_spacing = Pt(1)
+        band = self.doc.add_table(rows=2, cols=1)
+        _fix_table(band, [self.width])
+        for row, height in zip(band.rows, (1500, 5000)):
+            row._tr.get_or_add_trPr().append(parse_xml(f'<w:trHeight {nsdecls("w")} w:val="{height}" w:hRule="atLeast"/>'))
+            cell = row.cells[0]
+            _shade(cell, ACCENT)
+            _cell_borders(cell)
+            cell._tc.get_or_add_tcPr().append(parse_xml(
+                f'<w:tcMar {nsdecls("w")}><w:top w:w="360" w:type="dxa"/><w:left w:w="420" w:type="dxa"/>'
+                '<w:bottom w:w="360" w:type="dxa"/><w:right w:w="420" w:type="dxa"/></w:tcMar>'))
+        p = band.cell(0, 0).paragraphs[0]
+        p.add_run().add_picture(str(MONOGRAM_WHITE), height=Cm(1.15))
+        run = p.add_run("    Jahangir Shukurov")
+        run.font.bold, run.font.size, run.font.color.rgb = True, Pt(11), rgb("FFFFFF")
         run = p.add_run("  |  GRC Portfolio")
-        run.font.size, run.font.color.rgb = Pt(11), rgb(MUTED)
-        p = self.doc.add_paragraph()
-        p.paragraph_format.space_before = Pt(120)
+        run.font.size, run.font.color.rgb = Pt(11), rgb("CFE3E8")
+        low = band.cell(1, 0)
+        low._tc.get_or_add_tcPr().append(parse_xml(f'<w:vAlign {nsdecls("w")} w:val="bottom"/>'))
+        p = low.paragraphs[0]
         run = p.add_run(self.label.upper())
-        run.font.bold, run.font.size, run.font.color.rgb = True, Pt(10.5), rgb(ACCENT)
-        p = self.doc.add_paragraph()
+        run.font.bold, run.font.size, run.font.color.rgb = True, Pt(10.5), rgb("9CD3DF")
+        p = low.add_paragraph()
         p.paragraph_format.line_spacing = 1.05
         run = p.add_run(self.title)
-        run.font.bold, run.font.size, run.font.color.rgb = True, Pt(30), rgb(INK)
-        p = self.doc.add_paragraph()
+        run.font.bold, run.font.size, run.font.color.rgb = True, Pt(30), rgb("FFFFFF")
+        p = low.add_paragraph()
+        p.paragraph_format.space_after = Pt(0)
         run = p.add_run(self.subtitle)
-        run.font.size, run.font.color.rgb = Pt(13), rgb(MUTED)
-        p.paragraph_format.space_after = Pt(14)
-        _para_border(p, "bottom", ACCENT, 18, 12)
+        run.font.size, run.font.color.rgb = Pt(13), rgb("DCEBEE")
+        self._spacer(20)
         for key, value in (("Client", self.client), ("Document ID", self.doc_id), ("Version", self.version),
                            ("Date", self.date), ("Classification", self.classification)):
             p = self.doc.add_paragraph()
@@ -391,8 +410,7 @@ class BrandDoc:
             run = p.add_run(f"{key}\t")
             run.font.color.rgb = rgb(MUTED)
             p.add_run(value).font.bold = True
-        self.doc.paragraphs[-5].paragraph_format.space_before = Pt(14)
-        p = self.callout(DISCLAIMER, space_before=70)
+        p = self.callout(DISCLAIMER, space_before=150)
         self.page_break()
         self._front_heading("Document control")
         self.table(["Field", "Value"], [
@@ -610,11 +628,27 @@ class BrandDoc:
 
 # --- Build pipeline ---------------------------------------------------------------------------
 
-def to_pdf(docx_path: Path) -> Path:
-    docx_path = Path(docx_path)
-    subprocess.run(["soffice", "--headless", "--convert-to", "pdf", "--outdir", str(docx_path.parent), str(docx_path)],
+def _office_profile() -> str:
+    """Use a private LibreOffice profile set to en-US, so PDFs show 1.4 rather than a local 1,4."""
+    profile = Path(tempfile.gettempdir()) / "js-office-profile-en-us"
+    config = profile / "user" / "registrymodifications.xcu"
+    if not config.exists():
+        config.parent.mkdir(parents=True, exist_ok=True)
+        config.write_text(
+            '<?xml version="1.0" encoding="UTF-8"?>\n<oor:items xmlns:oor="http://openoffice.org/2001/registry" '
+            'xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">'
+            '<item oor:path="/org.openoffice.Setup/L10N"><prop oor:name="ooSetupSystemLocale" oor:op="fuse"><value>en-US</value></prop></item>'
+            '<item oor:path="/org.openoffice.Setup/L10N"><prop oor:name="ooLocale" oor:op="fuse"><value>en-US</value></prop></item>'
+            '</oor:items>\n', encoding="utf-8")
+    return profile.as_uri()
+
+
+def to_pdf(source: Path, out_dir: Path | None = None) -> Path:
+    source = Path(source)
+    out_dir = Path(out_dir or source.parent)
+    subprocess.run(["soffice", f"-env:UserInstallation={_office_profile()}", "--headless", "--convert-to", "pdf", "--outdir", str(out_dir), str(source)],
                    check=True, capture_output=True, timeout=240)
-    return docx_path.with_suffix(".pdf")
+    return out_dir / (source.stem + ".pdf")
 
 
 def measure_headings(pdf_path, headings):
@@ -631,7 +665,8 @@ def measure_headings(pdf_path, headings):
                 text = "".join(s["text"] for s in spans).strip()
                 size = max((s["size"] for s in spans), default=0)
                 if size >= 11.5:
-                    lines.append(re.sub(r"\s+", " ", re.sub(r"^\d+(\.\d+)?\s*", "", text)))
+                    lines.append(re.sub(r"\s+", " ", text))
+                    lines.append(re.sub(r"\s+", " ", re.sub(r"^\d+(\.\d+)?\s+", "", text)))
         lines_by_page.append(lines)
     for level, number, text, bookmark in headings:
         target = re.sub(r"\s+", " ", text)
