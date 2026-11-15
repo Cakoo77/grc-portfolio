@@ -522,7 +522,7 @@ class BrandDoc:
             else:
                 p.add_run(item)
 
-    def table(self, headers, rows, fractions, size=8.5, first_bold=False, fills=None, zebra=True, after=8, last_bold=False):
+    def table(self, headers, rows, fractions, size=8.5, first_bold=False, fills=None, zebra=True, after=8, last_bold=False, keep=False):
         widths = [int(self.width * f) for f in fractions]
         widths[-1] += self.width - sum(widths)
         table = self.doc.add_table(rows=1 + len(rows), cols=len(headers))
@@ -550,6 +550,7 @@ class BrandDoc:
                 para = cell.paragraphs[0]
                 para.paragraph_format.space_after = Pt(0)
                 para.paragraph_format.line_spacing = 1.05
+                para.paragraph_format.keep_with_next = keep and r < len(rows)
                 run = para.add_run(str(text))
                 run.font.size = Pt(size)
                 if (first_bold and c == 0) or (last_bold and r == len(rows)):

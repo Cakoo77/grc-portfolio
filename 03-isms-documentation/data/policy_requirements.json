@@ -1,0 +1,1428 @@
+[
+ {
+  "id": "IS-01",
+  "policy": "ORV-POL-01",
+  "section": "Commitment",
+  "text": "Orvanta protects the confidentiality, integrity and availability of customer funds records, payment services and personal data, and meets its legal, regulatory and contractual duties.",
+  "controls": [
+   "A.5.1",
+   "A.5.31"
+  ]
+ },
+ {
+  "id": "IS-02",
+  "policy": "ORV-POL-01",
+  "section": "Commitment",
+  "text": "The Management Board approves this policy, and the CEO communicates it to all staff and relevant suppliers.",
+  "controls": [
+   "A.5.1"
+  ]
+ },
+ {
+  "id": "IS-03",
+  "policy": "ORV-POL-01",
+  "section": "Commitment",
+  "text": "Security objectives are set each year in the ISMS Manual (ORV-ISMS-001), measured monthly and reported to the Management Board every quarter.",
+  "controls": [
+   "A.5.1"
+  ]
+ },
+ {
+  "id": "IS-04",
+  "policy": "ORV-POL-01",
+  "section": "Commitment",
+  "text": "Risks are assessed and treated under the Risk Management Methodology (ORV-RISK-001), and selected controls are recorded in the Statement of Applicability.",
+  "controls": [
+   "A.5.1"
+  ]
+ },
+ {
+  "id": "IS-05",
+  "policy": "ORV-POL-01",
+  "section": "Governance",
+  "text": "The CISO reports to the CEO and may raise any risk directly with the Management Board.",
+  "controls": [
+   "A.5.2"
+  ]
+ },
+ {
+  "id": "IS-06",
+  "policy": "ORV-POL-01",
+  "section": "Governance",
+  "text": "Every system, data class, supplier and control has a named owner, recorded in the asset register or the Statement of Applicability.",
+  "controls": [
+   "A.5.2",
+   "A.5.9"
+  ]
+ },
+ {
+  "id": "IS-07",
+  "policy": "ORV-POL-01",
+  "section": "Governance",
+  "text": "Conflicting duties are separated. Where a small team makes that impractical, the CISO approves a compensating control such as independent review.",
+  "controls": [
+   "A.5.3"
+  ]
+ },
+ {
+  "id": "IS-08",
+  "policy": "ORV-POL-01",
+  "section": "Governance",
+  "text": "Managers explain security duties to their teams, check that training is completed and act on policy breaches.",
+  "controls": [
+   "A.5.4"
+  ]
+ },
+ {
+  "id": "IS-09",
+  "policy": "ORV-POL-01",
+  "section": "Governance",
+  "text": "The Head of Compliance keeps current contacts for the Bank of Lithuania, the State Data Protection Inspectorate and the national CSIRT.",
+  "controls": [
+   "A.5.5"
+  ]
+ },
+ {
+  "id": "IS-10",
+  "policy": "ORV-POL-01",
+  "section": "Governance",
+  "text": "The CISO keeps Orvanta in at least one financial-sector security information sharing group.",
+  "controls": [
+   "A.5.6"
+  ]
+ },
+ {
+  "id": "IS-11",
+  "policy": "ORV-POL-01",
+  "section": "Governance",
+  "text": "The CISO reviews threat intelligence every month and updates the threat catalog and detection rules.",
+  "controls": [
+   "A.5.7"
+  ]
+ },
+ {
+  "id": "IS-12",
+  "policy": "ORV-POL-01",
+  "section": "Governance",
+  "text": "Projects that change systems or data handling include a security check at the start and before launch.",
+  "controls": [
+   "A.5.8"
+  ]
+ },
+ {
+  "id": "IS-13",
+  "policy": "ORV-POL-01",
+  "section": "Compliance and assurance",
+  "text": "The Head of Compliance maintains a register of legal, regulatory and contractual requirements, each with an owner.",
+  "controls": [
+   "A.5.31"
+  ]
+ },
+ {
+  "id": "IS-14",
+  "policy": "ORV-POL-01",
+  "section": "Compliance and assurance",
+  "text": "Software and content are used within their license terms, and open-source licenses are checked in CI.",
+  "controls": [
+   "A.5.32"
+  ]
+ },
+ {
+  "id": "IS-15",
+  "policy": "ORV-POL-01",
+  "section": "Compliance and assurance",
+  "text": "Records are kept and deleted according to the retention schedule owned by the Head of Compliance.",
+  "controls": [
+   "A.5.33"
+  ]
+ },
+ {
+  "id": "IS-16",
+  "policy": "ORV-POL-01",
+  "section": "Compliance and assurance",
+  "text": "Personal data is handled as the DPO directs, including transfer safeguards for access from Baku.",
+  "controls": [
+   "A.5.34"
+  ]
+ },
+ {
+  "id": "IS-17",
+  "policy": "ORV-POL-01",
+  "section": "Compliance and assurance",
+  "text": "The ISMS is reviewed independently every year through the internal audit programme.",
+  "controls": [
+   "A.5.35"
+  ]
+ },
+ {
+  "id": "IS-18",
+  "policy": "ORV-POL-01",
+  "section": "Compliance and assurance",
+  "text": "Control owners test their controls on the calendar set by the CISO and keep the evidence.",
+  "controls": [
+   "A.5.36"
+  ]
+ },
+ {
+  "id": "IS-19",
+  "policy": "ORV-POL-01",
+  "section": "Compliance and assurance",
+  "text": "Security-relevant operating procedures are documented, owned and kept in the controlled ISMS space in Confluence.",
+  "controls": [
+   "A.5.37"
+  ]
+ },
+ {
+  "id": "IS-20",
+  "policy": "ORV-POL-01",
+  "section": "Physical and environmental security",
+  "text": "Each office has a defined perimeter, with badge or reception-controlled entry and a visitor log.",
+  "controls": [
+   "A.7.1",
+   "A.7.2"
+  ]
+ },
+ {
+  "id": "IS-21",
+  "policy": "ORV-POL-01",
+  "section": "Physical and environmental security",
+  "text": "Offices are locked out of hours, and entrances are monitored by CCTV or the landlord's equivalent, confirmed yearly.",
+  "controls": [
+   "A.7.3",
+   "A.7.4"
+  ]
+ },
+ {
+  "id": "IS-22",
+  "policy": "ORV-POL-01",
+  "section": "Physical and environmental security",
+  "text": "Production runs only in AWS. The CISO reviews AWS assurance reports every year for physical, environmental and utility protection.",
+  "controls": [
+   "A.7.5",
+   "A.7.11"
+  ]
+ },
+ {
+  "id": "IS-23",
+  "policy": "ORV-POL-01",
+  "section": "Physical and environmental security",
+  "text": "No office holds production systems, so Orvanta has no secure areas. If that changes, the CISO sets rules before the systems arrive.",
+  "controls": [
+   "A.7.6"
+  ]
+ },
+ {
+  "id": "IS-24",
+  "policy": "ORV-POL-01",
+  "section": "Physical and environmental security",
+  "text": "Office network equipment sits in locked cabinets with protected cabling, and only IT Operations or approved suppliers maintain it.",
+  "controls": [
+   "A.7.8",
+   "A.7.12",
+   "A.7.13"
+  ]
+ },
+ {
+  "id": "AC-01",
+  "policy": "ORV-POL-02",
+  "section": "Principles",
+  "text": "Access is granted by role, on least privilege and need to know, and approved by the system owner.",
+  "controls": [
+   "A.5.15"
+  ]
+ },
+ {
+  "id": "AC-02",
+  "policy": "ORV-POL-02",
+  "section": "Principles",
+  "text": "Every person has one named identity in Okta. Shared accounts are not allowed.",
+  "controls": [
+   "A.5.16"
+  ]
+ },
+ {
+  "id": "AC-03",
+  "policy": "ORV-POL-02",
+  "section": "Principles",
+  "text": "Each service account has a named owner, no interactive login and credentials held in AWS Secrets Manager.",
+  "controls": [
+   "A.5.16",
+   "A.5.17"
+  ]
+ },
+ {
+  "id": "AC-04",
+  "policy": "ORV-POL-02",
+  "section": "Authentication",
+  "text": "All workforce applications sign in through Okta single sign-on with MFA. An application that cannot do so is retired or covered by an approved exception.",
+  "controls": [
+   "A.8.5"
+  ]
+ },
+ {
+  "id": "AC-05",
+  "policy": "ORV-POL-02",
+  "section": "Authentication",
+  "text": "Administrators authenticate with phishing-resistant security keys.",
+  "controls": [
+   "A.8.5"
+  ]
+ },
+ {
+  "id": "AC-06",
+  "policy": "ORV-POL-02",
+  "section": "Authentication",
+  "text": "Passwords are at least 14 characters, unique to each service and stored in the company password manager.",
+  "controls": [
+   "A.5.17"
+  ]
+ },
+ {
+  "id": "AC-07",
+  "policy": "ORV-POL-02",
+  "section": "Authentication",
+  "text": "Long-lived cloud access keys are not allowed in repositories or on laptops. Pipelines use short-lived OIDC roles.",
+  "controls": [
+   "A.5.17"
+  ]
+ },
+ {
+  "id": "AC-08",
+  "policy": "ORV-POL-02",
+  "section": "Privileged access",
+  "text": "Privileged access to AWS, Kubernetes and databases is requested just in time, approved, time-limited and logged.",
+  "controls": [
+   "A.8.2"
+  ]
+ },
+ {
+  "id": "AC-09",
+  "policy": "ORV-POL-02",
+  "section": "Privileged access",
+  "text": "Standing administrators are limited to two Okta super admins and one sealed break-glass account, which is tested every quarter.",
+  "controls": [
+   "A.8.2"
+  ]
+ },
+ {
+  "id": "AC-10",
+  "policy": "ORV-POL-02",
+  "section": "Privileged access",
+  "text": "Administrative tools such as kubectl and database clients are limited to approved roles, and their sessions are recorded.",
+  "controls": [
+   "A.8.18"
+  ]
+ },
+ {
+  "id": "AC-11",
+  "policy": "ORV-POL-02",
+  "section": "Access to data and code",
+  "text": "Access to production personal data is restricted by role, masked by default and time-limited for support cases.",
+  "controls": [
+   "A.8.3"
+  ]
+ },
+ {
+  "id": "AC-12",
+  "policy": "ORV-POL-02",
+  "section": "Access to data and code",
+  "text": "Source code access is granted by repository team, and production repositories have branch protection.",
+  "controls": [
+   "A.8.4"
+  ]
+ },
+ {
+  "id": "AC-13",
+  "policy": "ORV-POL-02",
+  "section": "Access lifecycle",
+  "text": "Joiner, mover and leaver changes follow the User Access Procedure (ORV-PRC-01). Leaver access is removed within 24 hours of the last working day.",
+  "controls": [
+   "A.5.18"
+  ]
+ },
+ {
+  "id": "AC-14",
+  "policy": "ORV-POL-02",
+  "section": "Access lifecycle",
+  "text": "System owners review access every quarter, and privileged access is reviewed every month.",
+  "controls": [
+   "A.5.18"
+  ]
+ },
+ {
+  "id": "AC-15",
+  "policy": "ORV-POL-02",
+  "section": "Network access",
+  "text": "Production networks are private, defined in Terraform and reached only through identity-aware access. Shared VPN profiles are not allowed.",
+  "controls": [
+   "A.8.20"
+  ]
+ },
+ {
+  "id": "AC-16",
+  "policy": "ORV-POL-02",
+  "section": "Network access",
+  "text": "Required security settings for network services, such as Cloudflare and AWS load balancers, are documented and checked in code review.",
+  "controls": [
+   "A.8.21"
+  ]
+ },
+ {
+  "id": "AC-17",
+  "policy": "ORV-POL-02",
+  "section": "Network access",
+  "text": "Production, staging, development and legacy environments run in separate AWS accounts with restricted connections between them.",
+  "controls": [
+   "A.8.22"
+  ]
+ },
+ {
+  "id": "AU-01",
+  "policy": "ORV-POL-03",
+  "section": "Using systems and information",
+  "text": "Company systems are for business use. Limited personal use is allowed when it is lawful and adds no security risk.",
+  "controls": [
+   "A.5.10"
+  ]
+ },
+ {
+  "id": "AU-02",
+  "policy": "ORV-POL-03",
+  "section": "Using systems and information",
+  "text": "Every user acknowledges this policy when joining and once a year.",
+  "controls": [
+   "A.5.10"
+  ]
+ },
+ {
+  "id": "AU-03",
+  "policy": "ORV-POL-03",
+  "section": "Using systems and information",
+  "text": "Company information is stored only in approved tools: Google Workspace, Confluence, Jira, GitHub, Slack and the business systems. Personal email and personal cloud storage are not used for company information.",
+  "controls": [
+   "A.5.10"
+  ]
+ },
+ {
+  "id": "AU-04",
+  "policy": "ORV-POL-03",
+  "section": "Using systems and information",
+  "text": "Credentials, card numbers and customer identity documents are never placed in Slack, tickets, email or code.",
+  "controls": [
+   "A.5.10",
+   "A.5.12"
+  ]
+ },
+ {
+  "id": "AU-05",
+  "policy": "ORV-POL-03",
+  "section": "Using systems and information",
+  "text": "Users do not install unlicensed software, disable security tools or connect unapproved devices.",
+  "controls": [
+   "A.5.10"
+  ]
+ },
+ {
+  "id": "AU-06",
+  "policy": "ORV-POL-03",
+  "section": "Using systems and information",
+  "text": "Customer data, cardholder data and other Restricted information are not entered into external AI tools without CISO approval.",
+  "controls": [
+   "A.5.10"
+  ]
+ },
+ {
+  "id": "AU-07",
+  "policy": "ORV-POL-03",
+  "section": "Using systems and information",
+  "text": "Orvanta monitors its systems for security purposes within the law, and tells users how.",
+  "controls": [
+   "A.5.10"
+  ]
+ },
+ {
+  "id": "AU-08",
+  "policy": "ORV-POL-03",
+  "section": "Workspace",
+  "text": "Screens lock after five minutes of inactivity, and users lock their device whenever they leave it.",
+  "controls": [
+   "A.7.7"
+  ]
+ },
+ {
+  "id": "AU-09",
+  "policy": "ORV-POL-03",
+  "section": "Workspace",
+  "text": "Desks, printers and whiteboards are cleared of confidential information at the end of the day.",
+  "controls": [
+   "A.7.7"
+  ]
+ },
+ {
+  "id": "AU-10",
+  "policy": "ORV-POL-03",
+  "section": "Workspace",
+  "text": "Web access from company devices is filtered for malicious sites, and users do not bypass the filter.",
+  "controls": [
+   "A.8.23"
+  ]
+ },
+ {
+  "id": "AU-11",
+  "policy": "ORV-POL-03",
+  "section": "Reporting",
+  "text": "Users report suspected incidents, phishing and lost devices at once through the #security-report channel or the phishing report button.",
+  "controls": [
+   "A.6.8"
+  ]
+ },
+ {
+  "id": "AM-01",
+  "policy": "ORV-POL-04",
+  "section": "Inventory and ownership",
+  "text": "IT Operations keeps one asset register covering systems, devices, SaaS tools, data classes and supplier services, each with a named owner.",
+  "controls": [
+   "A.5.9"
+  ]
+ },
+ {
+  "id": "AM-02",
+  "policy": "ORV-POL-04",
+  "section": "Inventory and ownership",
+  "text": "The register is reconciled every month against Terraform, Jamf and Okta.",
+  "controls": [
+   "A.5.9"
+  ]
+ },
+ {
+  "id": "AM-03",
+  "policy": "ORV-POL-04",
+  "section": "Inventory and ownership",
+  "text": "Leavers return all assets by their last working day, and IT Operations records the return.",
+  "controls": [
+   "A.5.11"
+  ]
+ },
+ {
+  "id": "AM-04",
+  "policy": "ORV-POL-04",
+  "section": "Classification and handling",
+  "text": "Owners classify information as Public, Internal, Confidential or Restricted.",
+  "controls": [
+   "A.5.12"
+  ]
+ },
+ {
+  "id": "AM-05",
+  "policy": "ORV-POL-04",
+  "section": "Classification and handling",
+  "text": "Restricted information, meaning cardholder data, identity documents and credentials, is stored only in systems approved for it.",
+  "controls": [
+   "A.5.12"
+  ]
+ },
+ {
+  "id": "AM-06",
+  "policy": "ORV-POL-04",
+  "section": "Classification and handling",
+  "text": "Documents and shared drives holding Confidential or Restricted information carry a label.",
+  "controls": [
+   "A.5.13"
+  ]
+ },
+ {
+  "id": "AM-07",
+  "policy": "ORV-POL-04",
+  "section": "Classification and handling",
+  "text": "Confidential and Restricted information leaves Orvanta only through approved channels, under contract and encrypted.",
+  "controls": [
+   "A.5.14"
+  ]
+ },
+ {
+  "id": "AM-08",
+  "policy": "ORV-POL-04",
+  "section": "Classification and handling",
+  "text": "Access to personal data from outside the EEA, including from Baku, follows the transfer impact assessment approved by the DPO.",
+  "controls": [
+   "A.5.14",
+   "A.5.34"
+  ]
+ },
+ {
+  "id": "AM-09",
+  "policy": "ORV-POL-04",
+  "section": "Data protection in systems",
+  "text": "Information is deleted at the end of its retention period, automatically where the system allows.",
+  "controls": [
+   "A.8.10"
+  ]
+ },
+ {
+  "id": "AM-10",
+  "policy": "ORV-POL-04",
+  "section": "Data protection in systems",
+  "text": "Full card numbers are not stored in any Orvanta system. Support tickets are redacted automatically and searched every month.",
+  "controls": [
+   "A.8.10",
+   "A.8.11"
+  ]
+ },
+ {
+  "id": "AM-11",
+  "policy": "ORV-POL-04",
+  "section": "Data protection in systems",
+  "text": "Personal data is masked by default in reporting, support views and non-production environments.",
+  "controls": [
+   "A.8.11"
+  ]
+ },
+ {
+  "id": "AM-12",
+  "policy": "ORV-POL-04",
+  "section": "Data protection in systems",
+  "text": "Data loss prevention rules alert on bulk exports and on external sharing of Confidential and Restricted information.",
+  "controls": [
+   "A.8.12"
+  ]
+ },
+ {
+  "id": "AM-13",
+  "policy": "ORV-POL-04",
+  "section": "Media and equipment",
+  "text": "Removable storage is blocked on the devices of roles that handle Restricted information.",
+  "controls": [
+   "A.7.10"
+  ]
+ },
+ {
+  "id": "AM-14",
+  "policy": "ORV-POL-04",
+  "section": "Media and equipment",
+  "text": "Devices are wiped, with evidence, before reuse. Disposal goes through a supplier that issues a destruction certificate.",
+  "controls": [
+   "A.7.14"
+  ]
+ },
+ {
+  "id": "CR-01",
+  "policy": "ORV-POL-05",
+  "section": "Encryption",
+  "text": "Production data at rest is encrypted with keys managed in AWS KMS.",
+  "controls": [
+   "A.8.24"
+  ]
+ },
+ {
+  "id": "CR-02",
+  "policy": "ORV-POL-05",
+  "section": "Encryption",
+  "text": "Data in transit uses TLS 1.2 or higher, including traffic between internal services.",
+  "controls": [
+   "A.8.24"
+  ]
+ },
+ {
+  "id": "CR-03",
+  "policy": "ORV-POL-05",
+  "section": "Encryption",
+  "text": "Laptop disks are encrypted with FileVault, enforced through Jamf.",
+  "controls": [
+   "A.8.24"
+  ]
+ },
+ {
+  "id": "CR-04",
+  "policy": "ORV-POL-05",
+  "section": "Encryption",
+  "text": "Backups are encrypted with keys held in the backup account.",
+  "controls": [
+   "A.8.24"
+  ]
+ },
+ {
+  "id": "CR-05",
+  "policy": "ORV-POL-05",
+  "section": "Encryption",
+  "text": "Only approved algorithms and managed cryptographic services are used. Teams do not design their own cryptography.",
+  "controls": [
+   "A.8.24"
+  ]
+ },
+ {
+  "id": "CR-06",
+  "policy": "ORV-POL-05",
+  "section": "Encryption",
+  "text": "Card data cryptography stays with Tessarin. Orvanta systems handle tokens and truncated card numbers only.",
+  "controls": [
+   "A.8.24"
+  ]
+ },
+ {
+  "id": "CR-07",
+  "policy": "ORV-POL-05",
+  "section": "Key management",
+  "text": "Keys and secrets are created and stored in AWS KMS or Secrets Manager, never in code, tickets or chat.",
+  "controls": [
+   "A.8.24",
+   "A.5.17"
+  ]
+ },
+ {
+  "id": "CR-08",
+  "policy": "ORV-POL-05",
+  "section": "Key management",
+  "text": "Each key has an owner, a purpose and a rotation date in the key inventory.",
+  "controls": [
+   "A.8.24"
+  ]
+ },
+ {
+  "id": "CR-09",
+  "policy": "ORV-POL-05",
+  "section": "Key management",
+  "text": "KMS keys rotate every year. Secrets and SFTP keys rotate at least every year, and immediately after suspected exposure.",
+  "controls": [
+   "A.8.24"
+  ]
+ },
+ {
+  "id": "CR-10",
+  "policy": "ORV-POL-05",
+  "section": "Key management",
+  "text": "Access to keys is limited by role and logged in CloudTrail.",
+  "controls": [
+   "A.8.24"
+  ]
+ },
+ {
+  "id": "CR-11",
+  "policy": "ORV-POL-05",
+  "section": "Key management",
+  "text": "Certificates are issued and renewed automatically, and expiry is monitored.",
+  "controls": [
+   "A.8.24"
+  ]
+ },
+ {
+  "id": "SD-01",
+  "policy": "ORV-POL-06",
+  "section": "Secure development",
+  "text": "Changes follow the secure development life cycle, with security gates set by the risk tier of the change.",
+  "controls": [
+   "A.8.25"
+  ]
+ },
+ {
+  "id": "SD-02",
+  "policy": "ORV-POL-06",
+  "section": "Secure development",
+  "text": "Security requirements, including abuse cases, are written for changes to payment, account and card functions.",
+  "controls": [
+   "A.8.26"
+  ]
+ },
+ {
+  "id": "SD-03",
+  "policy": "ORV-POL-06",
+  "section": "Secure development",
+  "text": "Major design changes go through threat modeling against the published engineering principles.",
+  "controls": [
+   "A.8.27"
+  ]
+ },
+ {
+  "id": "SD-04",
+  "policy": "ORV-POL-06",
+  "section": "Secure development",
+  "text": "All code is peer reviewed. Static analysis, dependency scanning and secret scanning run in every pipeline.",
+  "controls": [
+   "A.8.28"
+  ]
+ },
+ {
+  "id": "SD-05",
+  "policy": "ORV-POL-06",
+  "section": "Secure development",
+  "text": "Security tests run before release: dynamic testing in staging for web and API changes, and a penetration test every year.",
+  "controls": [
+   "A.8.29"
+  ]
+ },
+ {
+  "id": "SD-06",
+  "policy": "ORV-POL-06",
+  "section": "Secure development",
+  "text": "Orvanta does not outsource development today. If that changes, this policy and its reviews apply by contract.",
+  "controls": [
+   "A.8.30"
+  ]
+ },
+ {
+  "id": "SD-07",
+  "policy": "ORV-POL-06",
+  "section": "Environments and test data",
+  "text": "Development, staging and production run in separate AWS accounts, and engineers hold no standing production access.",
+  "controls": [
+   "A.8.31"
+  ]
+ },
+ {
+  "id": "SD-08",
+  "policy": "ORV-POL-06",
+  "section": "Environments and test data",
+  "text": "Live personal data is not used in development or staging. Test data is synthetic or masked.",
+  "controls": [
+   "A.8.33"
+  ]
+ },
+ {
+  "id": "SD-09",
+  "policy": "ORV-POL-06",
+  "section": "Change control",
+  "text": "Production changes deploy only through the CI pipeline, from protected branches, with approval from a second person.",
+  "controls": [
+   "A.8.32",
+   "A.5.3"
+  ]
+ },
+ {
+  "id": "SD-10",
+  "policy": "ORV-POL-06",
+  "section": "Change control",
+  "text": "Emergency changes use the logged break-glass route and are reviewed within two working days.",
+  "controls": [
+   "A.8.32"
+  ]
+ },
+ {
+  "id": "SD-11",
+  "policy": "ORV-POL-06",
+  "section": "Change control",
+  "text": "Infrastructure is defined in Terraform and applied only from CI. Configuration drift raises an alert.",
+  "controls": [
+   "A.8.9"
+  ]
+ },
+ {
+  "id": "SD-12",
+  "policy": "ORV-POL-06",
+  "section": "Change control",
+  "text": "Software reaches production only as built images. Manual installs on production hosts are not allowed.",
+  "controls": [
+   "A.8.19"
+  ]
+ },
+ {
+  "id": "SD-13",
+  "policy": "ORV-POL-06",
+  "section": "Vulnerabilities and testing",
+  "text": "Vulnerabilities are handled under the Vulnerability and Patch Management Procedure (ORV-PRC-02): critical within 7 days, high within 30, medium within 90.",
+  "controls": [
+   "A.8.8"
+  ]
+ },
+ {
+  "id": "SD-14",
+  "policy": "ORV-POL-06",
+  "section": "Vulnerabilities and testing",
+  "text": "Third-party components are tracked in a software bill of materials generated in CI.",
+  "controls": [
+   "A.8.8",
+   "A.5.21"
+  ]
+ },
+ {
+  "id": "SD-15",
+  "policy": "ORV-POL-06",
+  "section": "Vulnerabilities and testing",
+  "text": "Audit and penetration tests on production are scoped and scheduled with the Head of Platform and SRE to avoid disruption.",
+  "controls": [
+   "A.8.34"
+  ]
+ },
+ {
+  "id": "SU-01",
+  "policy": "ORV-POL-07",
+  "section": "Selection and contract",
+  "text": "Every supplier that handles Orvanta information or supports a critical service is recorded, tiered and given an owner.",
+  "controls": [
+   "A.5.19"
+  ]
+ },
+ {
+  "id": "SU-02",
+  "policy": "ORV-POL-07",
+  "section": "Selection and contract",
+  "text": "Tier 1 and Tier 2 suppliers pass a security assessment before a contract is signed and before any data is shared.",
+  "controls": [
+   "A.5.19"
+  ]
+ },
+ {
+  "id": "SU-03",
+  "policy": "ORV-POL-07",
+  "section": "Selection and contract",
+  "text": "Contracts include security, confidentiality, incident notification, audit, subprocessor and exit clauses, using the contract checklist.",
+  "controls": [
+   "A.5.20"
+  ]
+ },
+ {
+  "id": "SU-04",
+  "policy": "ORV-POL-07",
+  "section": "Selection and contract",
+  "text": "Suppliers disclose their subprocessors, and Tier 1 suppliers show how they manage their own supply chain.",
+  "controls": [
+   "A.5.21"
+  ]
+ },
+ {
+  "id": "SU-05",
+  "policy": "ORV-POL-07",
+  "section": "Selection and contract",
+  "text": "ICT suppliers that support critical or important functions are recorded in the DORA register of information.",
+  "controls": [
+   "A.5.19",
+   "A.5.31"
+  ]
+ },
+ {
+  "id": "SU-06",
+  "policy": "ORV-POL-07",
+  "section": "Operation",
+  "text": "Supplier access to Orvanta systems is named, protected by MFA, limited to the task and removed when the contract ends.",
+  "controls": [
+   "A.5.19"
+  ]
+ },
+ {
+  "id": "SU-07",
+  "policy": "ORV-POL-07",
+  "section": "Operation",
+  "text": "Tier 1 suppliers are reviewed every year and Tier 2 every two years. Assurance reports are tracked for expiry.",
+  "controls": [
+   "A.5.22"
+  ]
+ },
+ {
+  "id": "SU-08",
+  "policy": "ORV-POL-07",
+  "section": "Operation",
+  "text": "A significant change or incident at a supplier triggers a reassessment.",
+  "controls": [
+   "A.5.22"
+  ]
+ },
+ {
+  "id": "SU-09",
+  "policy": "ORV-POL-07",
+  "section": "Operation",
+  "text": "Cloud services follow the cloud security standard, which includes a shared responsibility matrix and exit considerations.",
+  "controls": [
+   "A.5.23"
+  ]
+ },
+ {
+  "id": "SU-10",
+  "policy": "ORV-POL-07",
+  "section": "Operation",
+  "text": "Supplier incidents that affect Orvanta are handled under the Incident Management Policy.",
+  "controls": [
+   "A.5.19"
+  ]
+ },
+ {
+  "id": "SU-11",
+  "policy": "ORV-POL-07",
+  "section": "Exit",
+  "text": "At the end of a contract, the supplier returns or destroys Orvanta information and confirms it in writing.",
+  "controls": [
+   "A.5.20"
+  ]
+ },
+ {
+  "id": "IM-01",
+  "policy": "ORV-POL-08",
+  "section": "Preparation",
+  "text": "The CISO maintains the incident response plan, the on-call rota and playbooks for ransomware and cloud credential compromise.",
+  "controls": [
+   "A.5.24"
+  ]
+ },
+ {
+  "id": "IM-02",
+  "policy": "ORV-POL-08",
+  "section": "Preparation",
+  "text": "The plan is exercised at least once a year through a tabletop exercise, and lessons update the playbooks.",
+  "controls": [
+   "A.5.24"
+  ]
+ },
+ {
+  "id": "IM-03",
+  "policy": "ORV-POL-08",
+  "section": "Reporting and triage",
+  "text": "Staff and suppliers report suspected security events immediately through #security-report or the on-call number.",
+  "controls": [
+   "A.6.8"
+  ]
+ },
+ {
+  "id": "IM-04",
+  "policy": "ORV-POL-08",
+  "section": "Reporting and triage",
+  "text": "Events are triaged against the severity matrix. Severity 1 and 2 events are declared incidents.",
+  "controls": [
+   "A.5.25"
+  ]
+ },
+ {
+  "id": "IM-05",
+  "policy": "ORV-POL-08",
+  "section": "Response",
+  "text": "Each incident has one incident lead with authority to isolate systems and revoke access.",
+  "controls": [
+   "A.5.26"
+  ]
+ },
+ {
+  "id": "IM-06",
+  "policy": "ORV-POL-08",
+  "section": "Response",
+  "text": "The Head of Compliance and the DPO join any incident that may need regulatory or customer notification. Deadlines follow the notification matrix.",
+  "controls": [
+   "A.5.26"
+  ]
+ },
+ {
+  "id": "IM-07",
+  "policy": "ORV-POL-08",
+  "section": "Response",
+  "text": "The CEO or a named delegate approves communication with customers, regulators and the media.",
+  "controls": [
+   "A.5.26"
+  ]
+ },
+ {
+  "id": "IM-08",
+  "policy": "ORV-POL-08",
+  "section": "Response",
+  "text": "Incident records are kept in the restricted security project in Jira.",
+  "controls": [
+   "A.5.26"
+  ]
+ },
+ {
+  "id": "IM-09",
+  "policy": "ORV-POL-08",
+  "section": "Evidence and learning",
+  "text": "Evidence is preserved under the evidence handling procedure, with chain of custody, before systems are rebuilt.",
+  "controls": [
+   "A.5.28"
+  ]
+ },
+ {
+  "id": "IM-10",
+  "policy": "ORV-POL-08",
+  "section": "Evidence and learning",
+  "text": "Severity 1 and 2 incidents get a post-incident review within 10 working days. Actions are tracked to closure and feed the risk register.",
+  "controls": [
+   "A.5.27"
+  ]
+ },
+ {
+  "id": "BR-01",
+  "policy": "ORV-POL-09",
+  "section": "Backup",
+  "text": "Production databases and document stores are backed up at least daily. The ledger also has point-in-time recovery.",
+  "controls": [
+   "A.8.13"
+  ]
+ },
+ {
+  "id": "BR-02",
+  "policy": "ORV-POL-09",
+  "section": "Backup",
+  "text": "Backups are copied to a separate AWS account with immutability, and to a second EU region.",
+  "controls": [
+   "A.8.13"
+  ]
+ },
+ {
+  "id": "BR-03",
+  "policy": "ORV-POL-09",
+  "section": "Backup",
+  "text": "No single identity can delete both production data and its backups.",
+  "controls": [
+   "A.8.13",
+   "A.5.3"
+  ]
+ },
+ {
+  "id": "BR-04",
+  "policy": "ORV-POL-09",
+  "section": "Backup",
+  "text": "Backup jobs are monitored, and a failure alerts the on-call engineer.",
+  "controls": [
+   "A.8.13"
+  ]
+ },
+ {
+  "id": "BR-05",
+  "policy": "ORV-POL-09",
+  "section": "Backup",
+  "text": "Backups are kept for the periods in the retention schedule.",
+  "controls": [
+   "A.8.13",
+   "A.5.33"
+  ]
+ },
+ {
+  "id": "BR-06",
+  "policy": "ORV-POL-09",
+  "section": "Backup",
+  "text": "Important SaaS data, including GitHub and Google Workspace, has an export or backup arrangement.",
+  "controls": [
+   "A.8.13"
+  ]
+ },
+ {
+  "id": "BR-07",
+  "policy": "ORV-POL-09",
+  "section": "Recovery",
+  "text": "A full restore of each critical database is tested every quarter, and the result is recorded.",
+  "controls": [
+   "A.8.13"
+  ]
+ },
+ {
+  "id": "BR-08",
+  "policy": "ORV-POL-09",
+  "section": "Recovery",
+  "text": "Recovery time and recovery point objectives for each critical service come from the Business Impact Analysis and are approved by the COO.",
+  "controls": [
+   "A.5.30"
+  ]
+ },
+ {
+  "id": "BR-09",
+  "policy": "ORV-POL-09",
+  "section": "Recovery",
+  "text": "Critical services run across at least three availability zones.",
+  "controls": [
+   "A.8.14"
+  ]
+ },
+ {
+  "id": "BR-10",
+  "policy": "ORV-POL-09",
+  "section": "Recovery",
+  "text": "Continuity plans exist for critical processes and are exercised every year.",
+  "controls": [
+   "A.5.30"
+  ]
+ },
+ {
+  "id": "BR-11",
+  "policy": "ORV-POL-09",
+  "section": "Recovery",
+  "text": "Security controls stay in force during a disruption. Any emergency relaxation is approved by the CISO, logged and reversed afterwards.",
+  "controls": [
+   "A.5.29"
+  ]
+ },
+ {
+  "id": "LM-01",
+  "policy": "ORV-POL-10",
+  "section": "Logging",
+  "text": "Audit logging is enabled in every AWS account and for Okta, GitHub and Google Workspace.",
+  "controls": [
+   "A.8.15"
+  ]
+ },
+ {
+  "id": "LM-02",
+  "policy": "ORV-POL-10",
+  "section": "Logging",
+  "text": "Logs are sent to a central log account that workload administrators cannot change.",
+  "controls": [
+   "A.8.15"
+  ]
+ },
+ {
+  "id": "LM-03",
+  "policy": "ORV-POL-10",
+  "section": "Logging",
+  "text": "Security logs are kept for at least 12 months.",
+  "controls": [
+   "A.8.15"
+  ]
+ },
+ {
+  "id": "LM-04",
+  "policy": "ORV-POL-10",
+  "section": "Logging",
+  "text": "Logs do not contain secrets, full card numbers or personal data that is not needed.",
+  "controls": [
+   "A.8.15"
+  ]
+ },
+ {
+  "id": "LM-05",
+  "policy": "ORV-POL-10",
+  "section": "Logging",
+  "text": "All systems take time from AWS time synchronization or an equivalent trusted source.",
+  "controls": [
+   "A.8.17"
+  ]
+ },
+ {
+  "id": "LM-06",
+  "policy": "ORV-POL-10",
+  "section": "Monitoring",
+  "text": "A SIEM runs detection rules mapped to MITRE ATT&CK for the priority attack scenarios.",
+  "controls": [
+   "A.8.16"
+  ]
+ },
+ {
+  "id": "LM-07",
+  "policy": "ORV-POL-10",
+  "section": "Monitoring",
+  "text": "Alerts are triaged every working day, and high-severity alerts page the on-call engineer.",
+  "controls": [
+   "A.8.16"
+  ]
+ },
+ {
+  "id": "LM-08",
+  "policy": "ORV-POL-10",
+  "section": "Monitoring",
+  "text": "Detection coverage is reviewed every quarter against the threat catalog.",
+  "controls": [
+   "A.8.16",
+   "A.5.7"
+  ]
+ },
+ {
+  "id": "LM-09",
+  "policy": "ORV-POL-10",
+  "section": "Monitoring",
+  "text": "Privileged activity and break-glass use are reviewed every month by someone other than the person who acted.",
+  "controls": [
+   "A.8.16"
+  ]
+ },
+ {
+  "id": "LM-10",
+  "policy": "ORV-POL-10",
+  "section": "Monitoring",
+  "text": "Monitoring follows privacy law, and its purposes are agreed with the DPO.",
+  "controls": [
+   "A.8.16"
+  ]
+ },
+ {
+  "id": "LM-11",
+  "policy": "ORV-POL-10",
+  "section": "Monitoring",
+  "text": "Capacity and performance are monitored with alerts, and capacity is forecast every year.",
+  "controls": [
+   "A.8.6"
+  ]
+ },
+ {
+  "id": "RW-01",
+  "policy": "ORV-POL-11",
+  "section": "Devices",
+  "text": "Company work is done only on company laptops enrolled in Jamf.",
+  "controls": [
+   "A.8.1",
+   "A.6.7"
+  ]
+ },
+ {
+  "id": "RW-02",
+  "policy": "ORV-POL-11",
+  "section": "Devices",
+  "text": "Okta blocks sign-in from devices that are not managed.",
+  "controls": [
+   "A.8.1"
+  ]
+ },
+ {
+  "id": "RW-03",
+  "policy": "ORV-POL-11",
+  "section": "Devices",
+  "text": "Laptops have disk encryption, EDR, automatic updates, screen lock and remote wipe enforced.",
+  "controls": [
+   "A.8.1",
+   "A.8.7"
+  ]
+ },
+ {
+  "id": "RW-04",
+  "policy": "ORV-POL-11",
+  "section": "Devices",
+  "text": "EDR alerts go to the SIEM, and users cannot switch the agent off.",
+  "controls": [
+   "A.8.7"
+  ]
+ },
+ {
+  "id": "RW-05",
+  "policy": "ORV-POL-11",
+  "section": "Devices",
+  "text": "Personal phones are used only for Okta Verify, Slack and email, through managed apps.",
+  "controls": [
+   "A.8.1"
+  ]
+ },
+ {
+  "id": "RW-06",
+  "policy": "ORV-POL-11",
+  "section": "Devices",
+  "text": "DNS filtering for malicious sites is active on every laptop.",
+  "controls": [
+   "A.8.23"
+  ]
+ },
+ {
+  "id": "RW-07",
+  "policy": "ORV-POL-11",
+  "section": "Working away from the office",
+  "text": "Remote workers use a private space, keep screens out of view and do not let others use their company device.",
+  "controls": [
+   "A.6.7"
+  ]
+ },
+ {
+  "id": "RW-08",
+  "policy": "ORV-POL-11",
+  "section": "Working away from the office",
+  "text": "Any network may be used, because access goes through encrypted, identity-aware connections. Shared VPN profiles are not used.",
+  "controls": [
+   "A.6.7"
+  ]
+ },
+ {
+  "id": "RW-09",
+  "policy": "ORV-POL-11",
+  "section": "Working away from the office",
+  "text": "Laptops are not left unattended in vehicles or public places, and a loss is reported within one hour.",
+  "controls": [
+   "A.7.9"
+  ]
+ },
+ {
+  "id": "RW-10",
+  "policy": "ORV-POL-11",
+  "section": "Working away from the office",
+  "text": "Work from a country outside the approved list needs approval from the Head of People and the CISO.",
+  "controls": [
+   "A.6.7"
+  ]
+ },
+ {
+  "id": "RW-11",
+  "policy": "ORV-POL-11",
+  "section": "Working away from the office",
+  "text": "Confidential documents are not printed outside the office.",
+  "controls": [
+   "A.6.7"
+  ]
+ },
+ {
+  "id": "HR-01",
+  "policy": "ORV-POL-12",
+  "section": "Before joining",
+  "text": "Candidates are screened before they start: identity, right to work and references. Roles with privileged access or control of funds also have criminal record checks where the law allows.",
+  "controls": [
+   "A.6.1"
+  ]
+ },
+ {
+  "id": "HR-02",
+  "policy": "ORV-POL-12",
+  "section": "Before joining",
+  "text": "Employment and contractor agreements include confidentiality, security duties and acceptance of the security policies. Vilnius and Baku use aligned templates.",
+  "controls": [
+   "A.6.2"
+  ]
+ },
+ {
+  "id": "HR-03",
+  "policy": "ORV-POL-12",
+  "section": "Before joining",
+  "text": "Contractors and other third parties sign a non-disclosure agreement before they see Confidential information.",
+  "controls": [
+   "A.6.6"
+  ]
+ },
+ {
+  "id": "HR-04",
+  "policy": "ORV-POL-12",
+  "section": "During employment",
+  "text": "New joiners complete security induction in their first week, and before they receive production access.",
+  "controls": [
+   "A.6.3"
+  ]
+ },
+ {
+  "id": "HR-05",
+  "policy": "ORV-POL-12",
+  "section": "During employment",
+  "text": "All staff complete security training every year, with role-based modules for engineers, support and finance.",
+  "controls": [
+   "A.6.3"
+  ]
+ },
+ {
+  "id": "HR-06",
+  "policy": "ORV-POL-12",
+  "section": "During employment",
+  "text": "Phishing simulations run every quarter, and people who click repeatedly get coaching.",
+  "controls": [
+   "A.6.3"
+  ]
+ },
+ {
+  "id": "HR-07",
+  "policy": "ORV-POL-12",
+  "section": "During employment",
+  "text": "Policy breaches are handled under the disciplinary process, fairly and in proportion. Reporting in good faith is never penalized.",
+  "controls": [
+   "A.6.4"
+  ]
+ },
+ {
+  "id": "HR-08",
+  "policy": "ORV-POL-12",
+  "section": "Changing role or leaving",
+  "text": "The Head of People tells IT Operations about leavers and movers on the day the change is confirmed.",
+  "controls": [
+   "A.6.5",
+   "A.5.18"
+  ]
+ },
+ {
+  "id": "HR-09",
+  "policy": "ORV-POL-12",
+  "section": "Changing role or leaving",
+  "text": "Confidentiality duties continue after employment ends, and leavers are reminded of them at exit.",
+  "controls": [
+   "A.6.5"
+  ]
+ },
+ {
+  "id": "HR-10",
+  "policy": "ORV-POL-12",
+  "section": "Changing role or leaving",
+  "text": "Managers confirm that assets are returned and knowledge is handed over.",
+  "controls": [
+   "A.5.11",
+   "A.6.5"
+  ]
+ }
+]
