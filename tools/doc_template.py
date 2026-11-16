@@ -672,7 +672,8 @@ def measure_headings(pdf_path, headings):
     for level, number, text, bookmark in headings:
         target = re.sub(r"\s+", " ", text)
         for i in range(start, len(lines_by_page)):
-            if target in lines_by_page[i]:
+            # A long heading wraps in the PDF, so its first line is also accepted as a match.
+            if any(line == target or (len(line) >= 24 and target.startswith(line)) for line in lines_by_page[i]):
                 pages[bookmark] = i + 1
                 start = i
                 break
