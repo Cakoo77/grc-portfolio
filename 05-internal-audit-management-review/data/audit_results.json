@@ -1,0 +1,489 @@
+{
+ "audit": "IA-2027-01",
+ "results": {
+  "Conforms": 32,
+  "Observation": 3,
+  "Minor nonconformity": 5,
+  "Major nonconformity": 2,
+  "Not yet due": 1,
+  "Opportunity for improvement": 3
+ },
+ "findings": [
+  {
+   "id": "NC-01",
+   "type": "Major nonconformity",
+   "title": "Critical suppliers not under control",
+   "criteria": "Clause 8.1; A.5.19, A.5.20, A.5.22; SU-02, SU-03",
+   "requirement": "Orvanta must control the processes it outsources. Its own policy says Tier 1 and Tier 2 suppliers pass a security assessment before a contract is signed (SU-02), and that contracts carry the clauses in the contract checklist (SU-03).",
+   "evidence": "The third-party risk register on 13 July 2027 showed five of eight Tier 1 suppliers assessed. Tessarin, Vaskora Bank and Helvora were not, against a target of 30 June. The Helvora contract was renewed on 1 June 2027 for 24 months with no assessment on file and no completed checklist (EN-05). The Head of Compliance and the General Counsel confirmed that a contract renewal does not trigger the third-party risk process.",
+   "statement": "Supplier security requirements were not applied to critical outsourced services. Three of eight Tier 1 suppliers are unassessed, and one critical contract was renewed without the required assessment and clauses, so Orvanta cannot show that these outsourced processes are controlled.",
+   "reason": "Major. The failure is systematic, because nothing connects contract renewal to the supplier process. It affects services that handle customer data and card processing, and it puts a required ISMS outcome in doubt.",
+   "owner": "R-HCOMP",
+   "risks": "RSK-12, RSK-13, RSK-14, RSK-29"
+  },
+  {
+   "id": "NC-02",
+   "type": "Minor nonconformity",
+   "title": "Leaver access not fully removed outside single sign-on",
+   "criteria": "A.5.18; AC-13; ORV-PRC-01 step 11",
+   "requirement": "Leaver access must be removed within 24 hours of the last working day (AC-13). The procedure requires accounts, tokens and keys in tools outside single sign-on to be checked and removed (step 11).",
+   "evidence": "Ten of 14 leavers from 1 April to 30 June 2027 were sampled. All ten Okta accounts were suspended within 21 hours. Two leaver tickets had no completed checklist for other tools. For one of them, a GitHub personal access token stayed valid for nine days after the last working day (EN-06). The token was not used in that time.",
+   "statement": "The leaver procedure was not followed in two of ten cases, and one access token remained valid for nine days, so access removal within 24 hours is not assured outside single sign-on.",
+   "reason": "Minor. The main control works and no misuse occurred. The lapse is limited to one step of the procedure.",
+   "owner": "R-ITOPS",
+   "risks": "RSK-06"
+  },
+  {
+   "id": "NC-03",
+   "type": "Minor nonconformity",
+   "title": "Superseded documents in use",
+   "criteria": "Clause 7.5.3",
+   "requirement": "Documented information must be controlled so that the current approved version is the one in use, and obsolete versions are not used by mistake.",
+   "evidence": "Twelve documents seen in use during interviews were compared with the controlled versions in Confluence. Two were superseded: the Baku platform team worked from a PDF of the Remote Working Policy at draft 0.9, and a restore runbook in Google Drive differed from the approved version 1.2 (EN-07).",
+   "statement": "Two of twelve sampled documents in use were superseded versions, so control of documented information is not fully effective.",
+   "reason": "Minor. The differences were small and caused no error, but the restore runbook is used in an emergency.",
+   "owner": "R-CISO",
+   "risks": "-"
+  },
+  {
+   "id": "NC-04",
+   "type": "Minor nonconformity",
+   "title": "Production access granted before induction",
+   "criteria": "Clause 7.3; A.6.3; HR-04",
+   "requirement": "New joiners complete security induction in their first week, and before they receive production access (HR-04).",
+   "evidence": "Fifteen of 22 joiners from 1 February to 30 June 2027 were sampled. For three engineers, Okta group history showed production access two to six days before the training platform recorded induction as complete (EN-08).",
+   "statement": "Three of 15 sampled joiners received production access before completing security induction, contrary to requirement HR-04.",
+   "reason": "Minor. All three completed induction within the first week, and no incident followed. The sequence is not enforced by any technical gate.",
+   "owner": "R-HPEOPLE",
+   "risks": "RSK-02"
+  },
+  {
+   "id": "NC-05",
+   "type": "Minor nonconformity",
+   "title": "Risk acceptance condition not met or tracked",
+   "criteria": "Clause 8.3; ORV-RISK-001; acceptance record RA-01",
+   "requirement": "An accepted risk above appetite stays valid only while its conditions are met. RA-01 required a documented manual regional recovery runbook by 30 June 2027.",
+   "evidence": "On 12 July 2027 no runbook existed. The Head of Platform and SRE confirmed it had not been started. The conditions of RA-01 were not recorded in the treatment plan or any tracker, and nobody had escalated the missed date (EN-09).",
+   "statement": "A condition of risk acceptance RA-01 was missed without escalation or re-approval, and acceptance conditions are not tracked, so the acceptance was not managed as the methodology requires.",
+   "reason": "Minor. The other three conditions were met and the risk itself did not change. The gap is in tracking.",
+   "owner": "R-HSRE",
+   "risks": "RSK-16"
+  },
+  {
+   "id": "NC-06",
+   "type": "Minor nonconformity",
+   "title": "Alerts not triaged every working day",
+   "criteria": "A.8.16; LM-07",
+   "requirement": "Alerts are triaged every working day, and high-severity alerts page the on-call engineer (LM-07).",
+   "evidence": "The SIEM triage log for June 2027 showed no entries from 14 to 17 June, when the Security Engineer was on leave. Eleven alerts waited up to four days. None was high severity, and paging worked throughout (EN-10).",
+   "statement": "Alerts were not triaged on four working days in June 2027 because the task depends on one person, contrary to requirement LM-07.",
+   "reason": "Minor. High-severity paging was unaffected and no alert proved to be an incident, but detection relies on a single person.",
+   "owner": "R-CISO",
+   "risks": "RSK-05, RSK-27"
+  },
+  {
+   "id": "OBV-01",
+   "type": "Observation",
+   "title": "Statement of Applicability is not current",
+   "criteria": "Clause 6.1.3",
+   "requirement": "-",
+   "evidence": "Version 1.1 is dated 30 April 2027. At least 14 controls have changed status since, including A.5.16 and A.8.22 after the legacy account closed.",
+   "statement": "If the statement is not updated before Stage 1, the certification auditor will find statuses that do not match reality.",
+   "reason": "Observation. Not yet a nonconformity, because statuses understate progress.",
+   "owner": "R-RISK",
+   "risks": "-"
+  },
+  {
+   "id": "OBV-02",
+   "type": "Observation",
+   "title": "KPI definitions are not written down",
+   "criteria": "Clause 9.1",
+   "requirement": "-",
+   "evidence": "Training completion excludes contractors in one report and includes them in another. Two people measure leaver suspension time from different start points.",
+   "statement": "Without written definitions, KPI results cannot be compared over time and could mislead the management review.",
+   "reason": "Observation. Results are reported and the differences are small.",
+   "owner": "R-CISO",
+   "risks": "-"
+  },
+  {
+   "id": "OBV-03",
+   "type": "Observation",
+   "title": "Exceptions close to expiry without a decision",
+   "criteria": "Policy exception process",
+   "requirement": "-",
+   "evidence": "Three of nine exceptions expire within 30 days. No renewal or closure decision is recorded for them.",
+   "statement": "An exception that lapses unnoticed becomes an unapproved policy breach.",
+   "reason": "Observation. None has expired yet.",
+   "owner": "R-CISO",
+   "risks": "-"
+  },
+  {
+   "id": "OFI-01",
+   "type": "Opportunity for improvement",
+   "title": "Automate recurring evidence collection",
+   "criteria": "Clause 9.1",
+   "requirement": "-",
+   "evidence": "Control owners export reports from Okta, Jamf and AWS by hand every month.",
+   "statement": "Scheduled exports into the ISMS space would cut effort and make evidence consistent for the certification audit.",
+   "reason": "-",
+   "owner": "R-CISO",
+   "risks": "-"
+  },
+  {
+   "id": "OFI-02",
+   "type": "Opportunity for improvement",
+   "title": "Link abuse cases to the threat catalog",
+   "criteria": "A.8.26",
+   "requirement": "-",
+   "evidence": "Abuse-case requirements in Jira are written as free text.",
+   "statement": "Tagging them with threat IDs would show which threats each change addresses and feed the risk register.",
+   "reason": "-",
+   "owner": "R-CTO",
+   "risks": "-"
+  },
+  {
+   "id": "OFI-03",
+   "type": "Opportunity for improvement",
+   "title": "Measure detection coverage",
+   "criteria": "A.8.16",
+   "requirement": "-",
+   "evidence": "Detection rules are reviewed every quarter, but no figure shows how much of the threat catalog is covered by a tested rule.",
+   "statement": "A coverage percentage would turn the review into a KPI and show progress to the Board.",
+   "reason": "-",
+   "owner": "R-CISO",
+   "risks": "-"
+  }
+ ],
+ "kpis": [
+  {
+   "id": "OBJ-01",
+   "name": "Certification milestones completed, of 6",
+   "unit": "count",
+   "better": "Higher",
+   "target": 6,
+   "series": [
+    0,
+    2,
+    3,
+    3,
+    3,
+    3,
+    4
+   ],
+   "latest": 4,
+   "status": "On track",
+   "trend": "Improving",
+   "owner": "Ugnė Baltrūnaitė"
+  },
+  {
+   "id": "OBJ-02",
+   "name": "Workforce tools outside Okta MFA",
+   "unit": "count",
+   "better": "Lower",
+   "target": 0,
+   "series": [
+    3,
+    3,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "latest": 0,
+   "status": "On target",
+   "trend": "Steady",
+   "owner": "Farid Ismayilov"
+  },
+  {
+   "id": "OBJ-03",
+   "name": "Shared administrative accounts",
+   "unit": "count",
+   "better": "Lower",
+   "target": 0,
+   "series": [
+    3,
+    3,
+    2,
+    1,
+    0,
+    0,
+    0
+   ],
+   "latest": 0,
+   "status": "On target",
+   "trend": "Steady",
+   "owner": "Rashad Guliyev"
+  },
+  {
+   "id": "OBJ-04",
+   "name": "Laptops enrolled in Jamf with EDR",
+   "unit": "%",
+   "better": "Higher",
+   "target": 100,
+   "series": [
+    78,
+    90,
+    100,
+    100,
+    100,
+    100,
+    100
+   ],
+   "latest": 100,
+   "status": "On target",
+   "trend": "Steady",
+   "owner": "Farid Ismayilov"
+  },
+  {
+   "id": "OBJ-05",
+   "name": "Median time to suspend a leaver account",
+   "unit": "hours",
+   "better": "Lower",
+   "target": 24,
+   "series": [
+    30,
+    26,
+    22,
+    20,
+    18,
+    19,
+    16
+   ],
+   "latest": 16,
+   "status": "On target",
+   "trend": "Improving",
+   "owner": "Farid Ismayilov"
+  },
+  {
+   "id": "OBJ-06",
+   "name": "Full restore tests passed in the last 12 months",
+   "unit": "count",
+   "better": "Higher",
+   "target": 4,
+   "series": [
+    1,
+    1,
+    1,
+    2,
+    2,
+    2,
+    3
+   ],
+   "latest": 3,
+   "status": "On track",
+   "trend": "Improving",
+   "owner": "Rashad Guliyev"
+  },
+  {
+   "id": "OBJ-07",
+   "name": "Priority log sources in the SIEM",
+   "unit": "%",
+   "better": "Higher",
+   "target": 100,
+   "series": [
+    0,
+    0,
+    20,
+    40,
+    60,
+    85,
+    90
+   ],
+   "latest": 90,
+   "status": "Off target",
+   "trend": "Improving",
+   "owner": "Nino Beridze"
+  },
+  {
+   "id": "OBJ-08",
+   "name": "Tier 1 suppliers with a current assessment, of 8",
+   "unit": "count",
+   "better": "Higher",
+   "target": 8,
+   "series": [
+    0,
+    0,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "latest": 6,
+   "status": "Off target",
+   "trend": "Improving",
+   "owner": "Eglė Norvilaitė"
+  },
+  {
+   "id": "OBJ-09",
+   "name": "Production deployments through the reviewed CI path",
+   "unit": "%",
+   "better": "Higher",
+   "target": 100,
+   "series": [
+    88,
+    92,
+    95,
+    97,
+    99,
+    100,
+    100
+   ],
+   "latest": 100,
+   "status": "On target",
+   "trend": "Steady",
+   "owner": "Tural Mammadli"
+  },
+  {
+   "id": "OBJ-10",
+   "name": "Annual security training completion",
+   "unit": "%",
+   "better": "Higher",
+   "target": 98,
+   "series": [
+    92,
+    93,
+    95,
+    96,
+    97,
+    98,
+    98
+   ],
+   "latest": 98,
+   "status": "On target",
+   "trend": "Steady",
+   "owner": "Justina Mockutė"
+  },
+  {
+   "id": "KRI-01",
+   "name": "Risks rated High or Critical",
+   "unit": "count",
+   "better": "Lower",
+   "target": 1,
+   "series": [
+    26,
+    26,
+    22,
+    17,
+    12,
+    8,
+    6
+   ],
+   "latest": 6,
+   "status": "On track",
+   "trend": "Improving",
+   "owner": "Lukas Jankauskas"
+  },
+  {
+   "id": "KRI-02",
+   "name": "Critical vulnerabilities past deadline",
+   "unit": "count",
+   "better": "Lower",
+   "target": 0,
+   "series": [
+    6,
+    5,
+    3,
+    2,
+    0,
+    1,
+    0
+   ],
+   "latest": 0,
+   "status": "On target",
+   "trend": "Improving",
+   "owner": "Rashad Guliyev"
+  },
+  {
+   "id": "KRI-03",
+   "name": "Alerts triaged within one working day",
+   "unit": "%",
+   "better": "Higher",
+   "target": 95,
+   "series": [
+    0,
+    0,
+    70,
+    85,
+    92,
+    81,
+    94
+   ],
+   "latest": 94,
+   "status": "Off target",
+   "trend": "Improving",
+   "owner": "Nino Beridze"
+  },
+  {
+   "id": "KRI-04",
+   "name": "Severity 1 and 2 security incidents",
+   "unit": "count",
+   "better": "Lower",
+   "target": 0,
+   "series": [
+    0,
+    0,
+    0,
+    0,
+    1,
+    0,
+    0
+   ],
+   "latest": 0,
+   "status": "On target",
+   "trend": "Steady",
+   "owner": "Nino Beridze"
+  },
+  {
+   "id": "KRI-05",
+   "name": "Corrective actions past due date",
+   "unit": "count",
+   "better": "Lower",
+   "target": 0,
+   "series": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+   ],
+   "latest": 0,
+   "status": "On target",
+   "trend": "Steady",
+   "owner": "Nino Beridze"
+  }
+ ],
+ "decisions": [
+  [
+   "D-01",
+   "The ISMS is suitable and adequate. Its effectiveness is confirmed except in supplier control, where the major nonconformity must close before Stage 1."
+  ],
+  [
+   "D-02",
+   "The corrective action plan of 6 August 2027 is approved."
+  ],
+  [
+   "D-03",
+   "Risk acceptance RA-01 is confirmed until 31 December 2027, now that the recovery runbook exists. A second-region design study is added to the 2028 plan."
+  ],
+  [
+   "D-04",
+   "The date for objective OBJ-07 moves to 30 September 2027. Objective OBJ-08 keeps its target, with a new date of 31 August 2027."
+  ],
+  [
+   "D-05",
+   "A managed detection service for out-of-hours alert cover is approved in principle, up to the budget the CFO confirms by 15 September."
+  ],
+  [
+   "D-06",
+   "Statement of Applicability version 1.2 is to be issued before Stage 1."
+  ],
+  [
+   "D-07",
+   "Stage 1 goes ahead on 20 and 21 September 2027, provided the follow-up check on NC-01 passes."
+  ]
+ ]
+}
