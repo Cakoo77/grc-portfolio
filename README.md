@@ -27,7 +27,7 @@ I am a final-year Information Security student in Baku with GRC and red-team int
 | <a href="03-isms-documentation/README.md"><img src="03-isms-documentation/cover.png" width="170" alt="ISMS Documentation cover"></a> | **[3. ISMS Documentation Suite](03-isms-documentation/README.md)** | ISMS manual, 12 policies and 2 procedures: 156 numbered requirements mapped to all 93 Annex A controls | Complete |
 | <a href="04-statement-of-applicability/README.md"><img src="04-statement-of-applicability/cover.png" width="170" alt="Statement of Applicability cover"></a> | **[4. Statement of Applicability](04-statement-of-applicability/README.md)** | All 93 Annex A controls with applicability, status, owner, evidence and links to risks and policy requirements | Complete |
 | <a href="05-internal-audit-management-review/README.md"><img src="05-internal-audit-management-review/cover.png" width="170" alt="Internal Audit cover"></a> | **[5. Internal Audit and Management Review](05-internal-audit-management-review/README.md)** | Three-year audit programme, 46-question audit with graded findings, root cause analysis, KPI dashboard and management review | Complete |
-| | 6. Third-Party Risk Management | Vendor tiering, due diligence questionnaire, DORA register of information | Planned |
+| | **[6. Third-Party Risk Management](06-third-party-risk/README.md)** | Lifecycle procedure and original due diligence questionnaire published. Vendor tiering, scored assessments and DORA register in progress | In progress |
 | | 7. Business Continuity and Incident Response | BIA, playbooks, notification matrix, tabletop exercise | Planned |
 | | 8. Unified Control Framework | Multi-framework control mapping and a Python coverage tool | Planned |
 
